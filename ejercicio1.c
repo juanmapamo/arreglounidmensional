@@ -8,7 +8,7 @@ int main (void)
 
     for (int i = 0; i < 20; i++)
     {
-        vector1[i]=rand()%10 + 1;
+        vector1[i]=rand()%10+1;
     }
     int max=0;
     for (int i = 0; i < 20; i++)
