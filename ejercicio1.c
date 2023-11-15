@@ -1,15 +1,32 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 int main (void)
 {
-    int vector1[10];
-    for (int i = 0; i < 10; i++)
+    srand (time (NULL));
+    int vector1[20];
+
+    for (int i = 0; i < 20; i++)
     {
-        printf("Ingresa el contenido del vector en la posicion %d.\n", i+1);
-        scanf ("%d", &vector1[1]);
+        vector1[i]=rand()%10 + 1;
     }
-    for (int i = 0; i < 10; i++)
+    int max=0;
+    for (int i = 0; i < 20; i++)
     {
-        printf("%d,  ", vector1 [i]);
+        printf("%d,  ", vector1[i]);
+        if (vector1[i] > max)
+        {
+            max = vector1[i];
+        }   
+    }
+    printf("El mayor numero es %d\n", max);
+    for (int i = 0; i < 20; i++)
+    {
+        if (max == vector1[i])
+        {
+            printf("El mayor esta en posiciones %d\n", i+1);
+        }
+        
     }
     
     return 0;
